@@ -21,8 +21,9 @@ const Dashboard = () => {
   const [notificationPermission, setNotificationPermission] = useState('default');
   const [activeDialog, setActiveDialog] = useState(null);
   const [editingItem, setEditingItem] = useState(null);
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  // Load data from localStorage
+  // Load data from localStorage on mount
   useEffect(() => {
     const savedSubjects = localStorage.getItem('student-subjects');
     const savedTasks = localStorage.getItem('student-tasks');
@@ -37,22 +38,31 @@ const Dashboard = () => {
       setNotificationPermission(Notification.permission);
     }
 
+    // Mark as initialized after loading
+    setIsInitialized(true);
+
     // Check for reminders
     checkReminders();
   }, []);
 
-  // Save to localStorage whenever data changes
+  // Save to localStorage whenever data changes (but only after initial load)
   useEffect(() => {
-    localStorage.setItem('student-subjects', JSON.stringify(subjects));
-  }, [subjects]);
+    if (isInitialized) {
+      localStorage.setItem('student-subjects', JSON.stringify(subjects));
+    }
+  }, [subjects, isInitialized]);
 
   useEffect(() => {
-    localStorage.setItem('student-tasks', JSON.stringify(tasks));
-  }, [tasks]);
+    if (isInitialized) {
+      localStorage.setItem('student-tasks', JSON.stringify(tasks));
+    }
+  }, [tasks, isInitialized]);
 
   useEffect(() => {
-    localStorage.setItem('student-schedule', JSON.stringify(schedule));
-  }, [schedule]);
+    if (isInitialized) {
+      localStorage.setItem('student-schedule', JSON.stringify(schedule));
+    }
+  }, [schedule, isInitialized]);
 
   // Request notification permission
   const requestNotificationPermission = async () => {
