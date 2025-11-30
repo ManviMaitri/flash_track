@@ -360,7 +360,7 @@ const Dashboard = () => {
                     <CardDescription>Manage your to-dos and build consistent habits</CardDescription>
                   </div>
                   <TaskDialog onSave={addTask} trigger={
-                    <Button className="pill-button bg-green-500 hover:bg-green-600 text-white" data-testid="add-task-btn">
+                    <Button className="pill-button bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg" data-testid="add-task-btn">
                       <Plus className="mr-2 h-4 w-4" /> Add Task
                     </Button>
                   } />
