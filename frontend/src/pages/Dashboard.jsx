@@ -572,7 +572,7 @@ const SubjectDialog = ({ trigger, onSave, editData }) => {
             </div>
           </div>
           <DialogFooter className="mt-6">
-            <Button type="submit" className="bg-purple-500 hover:bg-purple-600" data-testid="save-subject-btn">
+            <Button type="submit" className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white" data-testid="save-subject-btn">
               {editData ? 'Update' : 'Add'} Subject
             </Button>
           </DialogFooter>
