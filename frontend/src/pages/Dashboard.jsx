@@ -438,7 +438,7 @@ const Dashboard = () => {
                     <CardDescription>Organize your weekly class timetable</CardDescription>
                   </div>
                   <ScheduleDialog onSave={addSchedule} trigger={
-                    <Button className="pill-button bg-orange-500 hover:bg-orange-600 text-white" data-testid="add-schedule-btn">
+                    <Button className="pill-button bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg" data-testid="add-schedule-btn">
                       <Plus className="mr-2 h-4 w-4" /> Add Class
                     </Button>
                   } />
