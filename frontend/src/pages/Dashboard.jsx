@@ -670,7 +670,7 @@ const TaskDialog = ({ trigger, onSave, editData }) => {
             </div>
           </div>
           <DialogFooter className="mt-6">
-            <Button type="submit" className="bg-green-500 hover:bg-green-600" data-testid="save-task-btn">
+            <Button type="submit" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white" data-testid="save-task-btn">
               {editData ? 'Update' : 'Add'} Task
             </Button>
           </DialogFooter>
