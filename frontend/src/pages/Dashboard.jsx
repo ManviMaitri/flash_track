@@ -233,36 +233,42 @@ const Dashboard = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 fade-in">
-          <Card className="glass-card hover-lift stat-card before:bg-green-500" data-testid="completed-tasks-card">
+          <Card className="glass-card hover-lift stat-card before:bg-gradient-to-b before:from-emerald-400 before:to-emerald-600" data-testid="completed-tasks-card">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-gray-600">Completed Tasks</CardTitle>
-              <CheckSquare className="h-5 w-5 text-green-500" />
+              <CardTitle className="text-sm font-medium text-gray-700">Completed Tasks</CardTitle>
+              <div className="p-2 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg">
+                <CheckSquare className="h-5 w-5 text-white" />
+              </div>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-gray-800">{completedTasks}</div>
-              <p className="text-xs text-gray-500 mt-1">out of {tasks.length} total</p>
+              <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">{completedTasks}</div>
+              <p className="text-xs text-gray-600 mt-1">out of {tasks.length} total</p>
             </CardContent>
           </Card>
 
-          <Card className="glass-card hover-lift stat-card before:bg-purple-500" data-testid="study-sessions-card">
+          <Card className="glass-card hover-lift stat-card before:bg-gradient-to-b before:from-violet-400 before:to-purple-600" data-testid="study-sessions-card">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-gray-600">Study Sessions</CardTitle>
-              <Book className="h-5 w-5 text-purple-500" />
+              <CardTitle className="text-sm font-medium text-gray-700">Study Sessions</CardTitle>
+              <div className="p-2 bg-gradient-to-br from-violet-400 to-purple-600 rounded-lg">
+                <Book className="h-5 w-5 text-white" />
+              </div>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-gray-800">{totalStudySessions}</div>
-              <p className="text-xs text-gray-500 mt-1">across {subjects.length} subjects</p>
+              <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">{totalStudySessions}</div>
+              <p className="text-xs text-gray-600 mt-1">across {subjects.length} subjects</p>
             </CardContent>
           </Card>
 
-          <Card className="glass-card hover-lift stat-card before:bg-orange-500" data-testid="upcoming-classes-card">
+          <Card className="glass-card hover-lift stat-card before:bg-gradient-to-b before:from-amber-400 before:to-orange-600" data-testid="upcoming-classes-card">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium text-gray-600">Upcoming Classes</CardTitle>
-              <Calendar className="h-5 w-5 text-orange-500" />
+              <CardTitle className="text-sm font-medium text-gray-700">Upcoming Classes</CardTitle>
+              <div className="p-2 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg">
+                <Calendar className="h-5 w-5 text-white" />
+              </div>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-gray-800">{upcomingClasses}</div>
-              <p className="text-xs text-gray-500 mt-1">in your schedule</p>
+              <div className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{upcomingClasses}</div>
+              <p className="text-xs text-gray-600 mt-1">in your schedule</p>
             </CardContent>
           </Card>
         </div>
