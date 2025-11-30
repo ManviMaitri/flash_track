@@ -214,8 +214,8 @@ const Dashboard = () => {
         <div className="mb-8 fade-in">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">Study Tracker</h1>
-              <p className="text-base text-gray-600">Manage your routines, stay organized, excel academically</p>
+              <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-2">Flash Track</h1>
+              <p className="text-base text-gray-700">Your intelligent study companion for academic excellence</p>
             </div>
             
             {notificationPermission !== 'granted' && (
