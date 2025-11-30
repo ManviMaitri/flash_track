@@ -291,7 +291,7 @@ const Dashboard = () => {
                     <CardDescription>Track your subjects and enable spaced repetition</CardDescription>
                   </div>
                   <SubjectDialog onSave={addSubject} trigger={
-                    <Button className="pill-button bg-purple-500 hover:bg-purple-600 text-white" data-testid="add-subject-btn">
+                    <Button className="pill-button bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white shadow-lg" data-testid="add-subject-btn">
                       <Plus className="mr-2 h-4 w-4" /> Add Subject
                     </Button>
                   } />
