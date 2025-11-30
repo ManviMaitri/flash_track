@@ -208,7 +208,7 @@ const Dashboard = () => {
   const upcomingClasses = schedule.length;
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8 relative z-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8 fade-in">
