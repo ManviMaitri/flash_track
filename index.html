@@ -151,6 +151,26 @@
                 api_host: "https://us.i.posthog.com",
                 person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
             });
-        </script>
+        </script> 
+        <button id="btn-install" style="display:none;position:fixed;bottom:90px;right:20px;z-index:9999;">Install Flash Track</button>
+<script>
+let deferredPrompt;
+const btn = document.getElementById('btn-install');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  btn.style.display = 'inline-block';
+});
+
+btn.addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  btn.style.display = 'none';
+  console.log('Install outcome:', outcome);
+});
+</script>
     </body>
 </html>
