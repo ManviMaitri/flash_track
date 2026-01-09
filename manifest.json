@@ -1,0 +1,15 @@
+{
+  "short_name": "Flash Track",
+  "name": "Flash Track App",
+  "icons": [
+    {
+      "src": "IMG-20251224-WA0004.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
